@@ -1,0 +1,236 @@
+{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+   <style>
+		/* header {
+			background-color: rgba(30, 30, 30, 1);
+			margin-top: 0rem;
+			display: block;
+
+		} */
+		.header_section {
+    width: 10%;
+    float: left;
+    background-image: url(../images/banner-bg.png);
+    height: auto;
+    background-size: 500%;
+    padding: 0px 0px 20px 0px;
+}
+	</style>
+<head>
+   
+   <!-- basic -->
+   <!-- <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- mobile metas -->
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <!-- <title>AgroNexus</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <!-- <link rel="stylesheet" type="text/css" href="css/style.css">
+   <!-- Responsive-->
+   
+</head>
+
+<body>
+   <!-- header section start -->
+   
+   {% block body %}
+   
+   <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+   <script>
+      function loadGoogleTranslate(){
+         new google.translate.TranslateElement("google_element");
+      }
+   </script>
+  <div id="google_element"></div>
+   <div class="banner_section layout_padding"  style="background-image: url(/static/images/banner-bg3.png); height: 600px;">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+         <!-- <img src="{{ url_for('static', filename='images/banner-bg1.jpg') }}" > -->
+        <div class="carousel-inner">
+         
+          <div class="carousel-item active">
+           
+            <div class="container">
+               <h1 class="banner_taital">Disease detection</h1>
+               <p class="banner_text">This model uses image recognition technology to identify plant diseases and pests, helping farmers quickly identify and treat issues before they spread. It can assist in reducing crop losses and minimizing the use of pesticides.</p>
+               <div class="read_bt"><a href="{{ url_for('disease_prediction') }}">Detect</a></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+               <h1 class="banner_taital">Crop Recommendation</h1>
+               <p class="banner_text">This model utilizes machine learning algorithms to recommend crops based on factors such as soil type, climate, and geographical location. It can help farmers make informed decisions about what crops to plant, optimizing yield and reducing waste.</p>
+               <div class="read_bt"><a href="{{ url_for('crop') }}">Recommend</a></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+               <h1 class="banner_taital">Soil Quality Analysis</h1>
+               <p class="banner_text">This model analyzes soil composition and quality, providing farmers with valuable information about nutrients, pH levels, and more. It can help farmers make informed decisions about soil management practices and improve overall crop health.</p>
+               <div class="read_bt"><a href="{{ url_for('fertilizer_recommendation') }}">Analyse</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+      <!-- banner section end -->
+   <!-- header section end -->
+   <!-- services section start -->
+   <div class="container">
+      <h1 class="services_taital">Services </h1>
+      <!-- <p class="services_text"></p> -->
+      <div class="services_section_2">
+         <div class="row">
+            <div class="col-md-4">
+               <div><img src="{{ url_for('static',filename='images/img-1.png')}}" class="services_img"></div>
+               <div class="btn_main"><a href="{{ url_for('crop') }}">Crop Recommendation</a></div>
+            </div>
+            <div class="col-md-4">
+               <div><img src="{{ url_for('static',filename='images/img-2.png')}}" class="services_img"></div>
+               <div class="btn_main"><a href="{{ url_for('disease_prediction') }}">Disease <br> Detection</a></div>
+            </div>
+            <div class="col-md-4">
+               <div><img src="{{ url_for('static',filename='images/img-3.png')}}" class="services_img"></div>
+               <div class="btn_main"><a href="{{ url_for('fertilizer_recommendation') }}">Soil Quality <br>Analysis</a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- services section end -->
+   <!-- about section start -->
+   <div class="about_section layout_padding">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-6">
+               <div class="about_taital_main">
+                  <h1 class="about_taital">About Us</h1>
+                  <p class="about_text">We are a group of passionate students dedicated to creating advanced technology solutions for the agriculture industry. Our team consists of students from diverse academic backgrounds, including data science, agriculture, and computer science. As a student-led initiative, we understand the challenges that farmers face and are committed to providing accessible and affordable technology solutions. Our goal is to help farmers improve crop health, reduce losses, and increase profitability while promoting a healthier environment. We are proud to be making a meaningful contribution to the agriculture industry through our innovative solutions.</p>
+                  <div class="readmore_bt"><a href="#">Read More</a></div>
+               </div>
+            </div>
+            <div class="col-md-6 padding_right_0">
+               <div><img src="{{ url_for('static',filename='images/about-img.png')}}" class="about_img"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- about section end -->
+   <!-- blog section start -->
+   <!--<div class="blog_section layout_padding">
+      <div class="container">
+         <h1 class="blog_taital">See Our Video</h1>
+         <p class="blog_text">many variations of passages of Lorem Ipsum available, but the majority have suffered
+            alteration in some form, by injected humour, or randomised words which</p>
+         <div class="play_icon_main">
+            <div class="play_icon"><a href="#"><img src="images/play-icon.png"></a></div>
+         </div>
+      </div>
+   </div>-->
+   <!-- blog section end -->
+   <!-- client section start -->
+   <!--<div class="client_section layout_padding">
+      <div class="container">
+         <h1 class="client_taital">Testimonial</h1>
+         <div class="client_section_2">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="client_main">
+                        <div class="box_left">
+                           <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
+                        </div>
+                        <div class="box_right">
+                           <div class="client_taital_left">
+                              <div class="client_img"><img src="images/client-img.png"></div>
+                              <div class="quick_icon"><img src="images/quick-icon.png"></div>
+                           </div>
+                           <div class="client_taital_right">
+                              <h4 class="client_name">Dame</h4>
+                              <p class="customer_text">Customer</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="client_main">
+                        <div class="box_left">
+                           <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
+                        </div>
+                        <div class="box_right">
+                           <div class="client_taital_left">
+                              <div class="client_img"><img src="images/client-img.png"></div>
+                              <div class="quick_icon"><img src="images/quick-icon.png"></div>
+                           </div>
+                           <div class="client_taital_right">
+                              <h4 class="client_name">Dame</h4>
+                              <p class="customer_text">Customer</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="client_main">
+                        <div class="box_left">
+                           <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
+                        </div>
+                        <div class="box_right">
+                           <div class="client_taital_left">
+                              <div class="client_img"><img src="images/client-img.png"></div>
+                              <div class="quick_icon"><img src="images/quick-icon.png"></div>
+                           </div>
+                           <div class="client_taital_right">
+                              <h4 class="client_name">Dame</h4>
+                              <p class="customer_text">Customer</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- client section start -->
+   <!-- choose section start -->
+   <div class="choose_section layout_padding">
+      <div class="container">
+         <h1 class="choose_taital">Why Choose Us</h1>
+         <p class="choose_text">Our agriculture AIML project offers farmers advanced technology solutions for crop recommendation, disease detection, and soil quality analysis. With our machine learning algorithms, farmers can make informed decisions that optimize their crop yield and reduce waste, leading to higher profits and a healthier environment. We are committed to sustainable and eco-friendly farming practices, and our technology supports the use of these practices. Our team of experts is dedicated to providing excellent customer support and resources to ensure that farmers have the tools they need to succeed. By choosing our agriculture AIML project, farmers can improve their crop health, reduce losses, and ultimately increase profitability.</p>
+         <!-- <div class="newsletter_box">
+            <h1 class="let_text">Let Start Talk with Us</h1> -->
+            <!-- <div class="getquote_bt"><a href="#">Get A Quote</a></div> -->
+         </div> 
+      </div>
+   </div>
+   
+   
+   <!-- choose section end -->
+   <!-- footer section start -->
+   
+   {% endblock %}
+
+</body>
+
+</html>

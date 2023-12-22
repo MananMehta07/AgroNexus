@@ -1,0 +1,29 @@
+{% extends 'layout.html' %} {% block body %}
+
+
+
+
+
+   <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslatea"></script>
+   <script>
+      function loadGoogleTranslatea(){
+         new google.translate.TranslateElement("google_element");
+      }
+   </script>
+<style>
+   html body{
+      background-color: #e8f3ec;
+   }
+</style> 
+<div class="container py-2 mx-auto my-50 h-10 " style="margin: 9rem; background-color: #e8f3ec;" >
+  <div class="row">
+      <div class="col-sm py-2 py-md-3">
+          <div class="card card-body" style="justify-content: center; background-color:rgb(241, 251, 255)">
+           
+               <p class="text-center" style="color: rgb(41, 165, 57); font-size: 20px;"> The Crop recommended is:</br><b>{{ recommendation }}</b></p>
+          </div>
+      </div>
+  </div>
+</div>
+<div id="google_element"></div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<body>
+</script>
+
+   <!-- header section start -->
+   {% block body %}
+   <link href="{{ url_for('static', filename='static/css/style.css') }}" rel='stylesheet' type='text/css' />    
+   <!-- header section end -->
+   <!-- services section start -->
+   <!-- <div class="services_section layout_padding"> -->
+      <div class="container">
+         <h1 class="services_taital">Services </h1>
+         <!-- <p class="services_text"></p> -->
+         <div class="services_section_2">
+            <div class="row">
+               <div class="col-md-4">
+                  <div><img src="{{ url_for('static',filename='images/img-1.png')}}" class="services_img"></div>
+                  <div class="btn_main"><a href="{{ url_for('crop') }}">Crop Reccomendation</a></div>
+               </div>
+               <div class="col-md-4">
+                  <div><img src="{{ url_for('static',filename='images/img-2.png')}}" class="services_img"></div>
+                  <div class="btn_main"><a href="{{ url_for('disease_prediction') }}">Disease Detection</a></div>
+               </div>
+               <div class="col-md-4">
+                  <div><img src="{{ url_for('static',filename='images/img-3.png')}}" class="services_img"></div>
+                  <div class="btn_main"><a href="{{ url_for('fertilizer_recommendation') }}">Fertilizer Recommendation</a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   <!-- </div> -->
+   
+  
+   
+   <!-- services section end -->
+   <!-- footer section start -->
+   <div id="google_element"></div>
+   {% endblock %}
+</body>
+
+</html>

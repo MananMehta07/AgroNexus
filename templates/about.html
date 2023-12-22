@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   
+</head>
+
+<body>
+   {% block body %}
+   <!-- header section end -->
+   <!-- about section start -->
+   
+   <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslatea"></script>
+   <script>
+      function loadGoogleTranslatea(){
+         new google.translate.TranslateElement("google_element");
+      }
+   </script>
+   <div class="about_section layout_padding">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-6">
+               <div class="about_taital_main">
+                  <h1 class="about_taital">About Us</h1>
+                  <p class="about_text">We are a group of passionate students dedicated to creating advanced technology solutions for the agriculture industry. Our team consists of students from diverse academic backgrounds, including data science, agriculture, and computer science. As a student-led initiative, we understand the challenges that farmers face and are committed to providing accessible and affordable technology solutions. Our goal is to help farmers improve crop health, reduce losses, and increase profitability while promoting a healthier environment. We are proud to be making a meaningful contribution to the agriculture industry through our innovative solutions. </p>
+                  <div class="readmore_bt"><a href="#">Read More</a></div>
+               </div>
+            </div>
+            <div class="col-md-6 padding_right_0">
+               <div><img src="{{ url_for('static',filename='images/about-img.png')}}" class="about_img"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- about section end -->
+   <!-- footer section start -->
+   <div id="google_element"></div>
+   {% endblock %}
+</body>
+
+</html>

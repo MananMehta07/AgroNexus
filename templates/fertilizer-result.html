@@ -1,0 +1,46 @@
+
+
+
+
+
+
+{% extends 'layout.html' %}
+{% block body %}
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslatea"></script>
+<script>
+   function loadGoogleTranslatea(){
+      new google.translate.TranslateElement("google_element");
+   }
+</script>
+
+<style>
+  .card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  body {
+    background-image: url('https://cdn.pixabay.com/photo/2018/09/23/10/28/wheat-3694705_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+  }
+</style>
+<style>
+  html body{
+     background-color: #e8f3ec;
+  }
+</style> 
+<div class="container py-2 mx-auto my-50 h-10 " style="margin: 9rem;">
+  <div class="row">
+      <div class="col-sm py-2 py-md-3">
+          <div class="card card-body" style="justify-content: center ; background-color: rgb(241, 251, 255);">
+               <p class="text-center" style="color:rgb(41, 165, 57); font-size: 20px;">{{ recommendation }}</p>
+          </div>
+      </div>
+  </div>
+</div>
+<div id="google_element"></div>
+{% endblock %}
